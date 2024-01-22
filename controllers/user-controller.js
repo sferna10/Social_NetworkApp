@@ -44,7 +44,7 @@ const userController = {
   //update a user
   async updateUser(req, res) {
     try {
-        const dbUserData = await User.findOnAndUpdate(
+        const dbUserData = await User.findOneAndUpdate(
         {_id:req.params.userId },
         {
           $set: req.body,
