@@ -1,16 +1,8 @@
-const express = require('express');
-const db = require('./config/connection');
-const routes = require('./routes');
+const router = require('express').Router();
+const thought-routes = require('./thought-routes');
+const user-routes = require('./user-Routes');
 
-const PORT = 3001;
-const app = express();
+router.use('/User', user-routes);
+router.use('/Thought', thought-routes);
 
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
-app.use(routes);
-
-db.once('open', () => {
-  app.listen(PORT, () => {
-    console.log(`API server running on port ${PORT}!`);
-  });
-});
+module.exports = router;
