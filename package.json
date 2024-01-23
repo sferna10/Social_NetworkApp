@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index",
+    "start": "node server",
     "dev": "nodemon index",
     "seed": "node utils/seed",
     "heroku-postbuild": "node utils/seed.js"
@@ -13,6 +13,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "dateformat": "^5.0.3",
     "express": "^4.17.1",
     "mongoose": "^7.0.2",
     "nodemon": "^2.0.9"
