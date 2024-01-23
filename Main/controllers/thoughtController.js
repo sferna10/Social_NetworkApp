@@ -7,7 +7,7 @@ const thoughtController = {
   async getThoughts(req, res) {
     try {
       const dbThoughtData = await Thought.find()
-      .sort({ createAt: -1});
+      .sort({ createdAt: -1});
       
       res.json(dbthoughtData);
     } catch (err) {
@@ -58,8 +58,8 @@ const thoughtController = {
   //update thought
   async updateThought(req, res) {
         const dbThoughtData = await
-        Thought.findOneAndUpdate({ _id:
-        req.params.thoughtId },{$set: req.body },{
+        Thought.UpdateOne({ _id:
+        req.params.thoughtId }, { $set: req.body }, { 
         runValidators: true,
         new: true });
         
