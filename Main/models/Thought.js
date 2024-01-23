@@ -10,7 +10,7 @@ const thoughtSchema = new Schema(
    minlength: 1,
    maxlength: 280
    },
-   createAt: {
+   createdAt: {
     type: Date,
     default: Date.now,
     // get: timestamp => dateFormat(timestamp)
@@ -29,7 +29,7 @@ const thoughtSchema = new Schema(
    }
 );
 
-thougthSchema.virtual('reactionCount').get(function() {
+thoughtSchema.virtual('reactionCount').get(function() {
   return this.reaction.length;
 });
 

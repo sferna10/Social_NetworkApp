@@ -9,7 +9,7 @@ const thoughtController = {
       const dbThoughtData = await Thought.find()
       .sort({ createdAt: -1});
       
-      res.json(dbthoughtData);
+      res.json(dbThoughtData);
     } catch (err) {
       console.log(err);
       res.status(500).json(err);
@@ -126,7 +126,7 @@ const thoughtController = {
   async removeReaction(req, res) {
      try {
      const dbThoughtData = await
-      Thougnt.findOneAndUpdate(
+      Thought.findOneAndUpdate(
        { _id: req.params.thoughtId },
        { $pull: { reactions: { reactionId: 
         req.params.reactionId }}},
