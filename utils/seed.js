@@ -1,5 +1,5 @@
 const connection = require('../config/connection');
-const User = require('../models/user');
+const User = require('../models/User');
 const { getRandomName } = require('./data');
 
 // Start the seeding runtime timer
