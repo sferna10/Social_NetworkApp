@@ -10,7 +10,6 @@ An application where users can share their thoughts, react to friends' thoughts,
 * [Usage](#usage)
 
 * [License](#license)
-
 * [Contributing](#contributing)
 * [Tests](#test)
 * [Questions](#questions)
@@ -20,19 +19,18 @@ An application where users can share their thoughts, react to friends' thoughts,
 To install the necessary dependencies, run the following command:
 
 ```
+npm i
 
-npm I
-npm start
+node server
 
 ```
 
 ## Usage
 
+When the user is connected with the API, it should open the API to get routes in insomnia for the user and thoughts. The user can test  API, POST, PUT, and DELETE routes in Insomnia.
 
 
 ## License 
-    
-        This project is licensed under the MIT license.
 
 ## Contributing
 
@@ -48,4 +46,4 @@ npm tests
 
 ## Questions
 
-If you have any questions about the report-Error. open an issue or contact me  directly at sferna10@email.cpcc.edu. You can find more of my work at [sferna10](https://github.com/sferna10/).
+If you have any questions about the report-Error. Open an issue or contact me  directly at sferna10@email.cpcc.edu. You can find more of my work at [sferna10](https://github.com/sferna10/).
