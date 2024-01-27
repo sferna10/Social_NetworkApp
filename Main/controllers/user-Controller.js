@@ -9,7 +9,7 @@ const userController = {
       const dbUserData = await User.find()
       .select('-_v')
       
-      res.json(dbUsersData);
+      res.json(dbUserData);
     } catch (err) {
       console.log(err);
       res.status(500).json(err);
